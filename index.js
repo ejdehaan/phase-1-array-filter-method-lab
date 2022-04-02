@@ -1,17 +1,18 @@
 const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
 
-function findMatching(array, element) {
-    if (element == array.element)
-        return array.element
-    else (element != element)
-        return []
+function findMatching(source, element) {
+    return source.filter(
+        (possibleMatch) => possibleMatch.toLowerCase() === element.toLowerCase()
+    );
 }
 
-function filter(collection,cb) {
-    for (const element of collection) {
-        if (findMatching()) {
-            console.log(element)
-        }
-    }
+function fuzzyMatch(arr, testString) {
+    return arr.filter(
+        (possibleMatch) =>
+            possibleMatch.toLowerCase().indexOf(testString.toLowerCase()) === 0
+    );
 }
 
+function matchName(arr2, strings) {
+    return arr2.filter((record) => record.name === strings);
+}
